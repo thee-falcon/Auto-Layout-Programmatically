@@ -9,7 +9,21 @@ import UIKit
 
 class PageCell: UICollectionViewCell {
     
-    let schoolImageView: UIImageView = {
+    var page: Page? {
+        didSet {
+            guard let unwrappedPage = page else {return}
+            schoolImageView.image = UIImage(named: page!.imageName)
+            
+            let attributedText = NSMutableAttributedString(
+                string: unwrappedPage.headerText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)])
+            attributedText.append(NSAttributedString(string: "\n\n\n\(unwrappedPage.bodyText)",
+                                                     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+
+            descriptionText.attributedText = attributedText
+            descriptionText.textAlignment = .center
+        }
+    }
+    private let schoolImageView: UIImageView = {
         // create an instance of UIImage using the image name
         let image = UIImage(named: "one")
         let imageView = UIImageView(image: image)
@@ -19,14 +33,12 @@ class PageCell: UICollectionViewCell {
         return imageView
     }()
     
-    let descriptionText: UITextView = {
+    private let descriptionText: UITextView = {
         let textView = UITextView()
         
         let attributedText = NSMutableAttributedString(
             string: "Join 1337 And Embark On The Adventure", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
-        attributedText.append(NSAttributedString(
-            string: "\n \n \nYou probably have all the best reasons in the world to apply to 1337, don't waste any more time.",
-                                                 attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+
         textView.attributedText = attributedText
         textView.textAlignment = .center
         textView.translatesAutoresizingMaskIntoConstraints = false
