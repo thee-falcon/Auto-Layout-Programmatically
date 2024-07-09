@@ -25,9 +25,6 @@ class ViewController: UIViewController {
         
         let attributedText = NSMutableAttributedString(
             string: "Join 1337 And Embark On The Adventure", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
-//        attributedText.append(NSAttributedString(
-//            string: "\n \n \nYou probably have all the best reasons in the world to apply to 1337, don't waste any more time.",
-//                                                 attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         textView.attributedText = attributedText
         textView.textAlignment = .center
         textView.translatesAutoresizingMaskIntoConstraints = false
