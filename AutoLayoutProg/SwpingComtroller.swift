@@ -7,20 +7,7 @@
 
 import UIKit
 
-class SwpingComtroller: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
-    override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
-        coordinator.animate(alongsideTransition: { (_) in
-            self.collectionViewLayout.invalidateLayout()
-            
-            let indexPath = IndexPath(item: self.pageControler.currentPage, section: 0)
-            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-            
-        }) {(_) in
-            
-        }
-    }
-    
+class SwpingComtroller: UICollectionViewController, UICollectionViewDelegateFlowLayout {    
     let pages = [
         Page(imageName: "one", headerText: "Join 1337 And Embark On The Adventure", bodyText: "1337 is the first to provide IT training in Morocco, completely free of charge, open and accessible to anyone between the ages of 18 and 30. No need for an IT degree, or of having undergone extensive IT training. The only criteria for admission in Treize, Trente-Sept is CREATIVITY."),
         Page(imageName: "two", headerText: "Our Campuses", bodyText: "Everything is in place to ensure the success of the students’ education."),
@@ -61,7 +48,7 @@ class SwpingComtroller: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
-    private lazy var pageControler : UIPageControl = {
+    lazy var pageControler : UIPageControl = {
        let pc = UIPageControl()
         pc.numberOfPages = pages.count
         pc.currentPage = 0
@@ -100,27 +87,5 @@ class SwpingComtroller: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView?.backgroundColor = .white
         collectionView?.register(PageCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.isPagingEnabled =  true
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pages.count
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! PageCell
-        
-        let page = pages[indexPath.item]
-        
-        cell.page = page
-
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height)
     }
 }

@@ -10,6 +10,8 @@
 		D81727B22C27B6B0004F3458 /* SwpingComtroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81727B12C27B6B0004F3458 /* SwpingComtroller.swift */; };
 		D81727B42C27CB45004F3458 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81727B32C27CB45004F3458 /* PageCell.swift */; };
 		D81727B62C3DBECC004F3458 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81727B52C3DBECC004F3458 /* Page.swift */; };
+		D81727B82C4214D6004F3458 /* SwipeController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81727B72C4214D6004F3458 /* SwipeController+extension.swift */; };
+		D81727BA2C421A79004F3458 /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81727B92C421A79004F3458 /* SwipingController+UICollectionView.swift */; };
 		D87BBF5C2C1E7EF900A52649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87BBF5B2C1E7EF900A52649 /* AppDelegate.swift */; };
 		D87BBF5E2C1E7EF900A52649 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87BBF5D2C1E7EF900A52649 /* SceneDelegate.swift */; };
 		D87BBF602C1E7EF900A52649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87BBF5F2C1E7EF900A52649 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		D81727B12C27B6B0004F3458 /* SwpingComtroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwpingComtroller.swift; sourceTree = "<group>"; };
 		D81727B32C27CB45004F3458 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		D81727B52C3DBECC004F3458 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		D81727B72C4214D6004F3458 /* SwipeController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipeController+extension.swift"; sourceTree = "<group>"; };
+		D81727B92C421A79004F3458 /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 		D87BBF582C1E7EF900A52649 /* AutoLayoutProg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutProg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87BBF5B2C1E7EF900A52649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D87BBF5D2C1E7EF900A52649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				D87BBF692C1E7EFB00A52649 /* Info.plist */,
 				D81727B32C27CB45004F3458 /* PageCell.swift */,
 				D81727B52C3DBECC004F3458 /* Page.swift */,
+				D81727B72C4214D6004F3458 /* SwipeController+extension.swift */,
+				D81727B92C421A79004F3458 /* SwipingController+UICollectionView.swift */,
 			);
 			path = AutoLayoutProg;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81727BA2C421A79004F3458 /* SwipingController+UICollectionView.swift in Sources */,
+				D81727B82C4214D6004F3458 /* SwipeController+extension.swift in Sources */,
 				D81727B22C27B6B0004F3458 /* SwpingComtroller.swift in Sources */,
 				D81727B42C27CB45004F3458 /* PageCell.swift in Sources */,
 				D81727B62C3DBECC004F3458 /* Page.swift in Sources */,
